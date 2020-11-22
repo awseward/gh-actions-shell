@@ -1,0 +1,5 @@
+name: 'Shell Actions'
+description: 'A couple of actions for checking shell files'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
