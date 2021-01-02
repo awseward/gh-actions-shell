@@ -9,7 +9,7 @@ let GHA = imports.GHA
 
 let name = "awseward/gh-actions-shell"
 
-let version = "0.1.2"
+let version = "0.1.3"
 
 let Inputs = { Type = {}, default = {=} }
 
