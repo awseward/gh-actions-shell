@@ -9,6 +9,6 @@ let Inputs = ./inputs.dhall
 
 let mkStep/next = GHA.actions.mkStep/next Inputs.Type Inputs.{ toJSON }
 
-let mkStep = mkStep/next "awseward/gh-actions-shell" "0.1.3"
+let mkStep = mkStep/next "awseward/gh-actions-shell" "0.1.5"
 
 in  { mkStep, mkStep/next, Inputs } ⫽ GHA.Step.{ Common }
