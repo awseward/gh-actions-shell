@@ -6,9 +6,9 @@ let On = GHA.On
 
 let OS = GHA.OS.Type
 
-let action_templates = imports.action_templates
+let job-templates = imports.job-templates
 
-let Checkout = action_templates.actions/Checkout
+let Checkout = job-templates.actions/Checkout
 
 in  GHA.Workflow::{
     , name = "CI"
@@ -18,7 +18,7 @@ in  GHA.Workflow::{
           , runs-on = [ OS.ubuntu-latest ]
           , steps =
               Checkout.plainDo
-                [ let action = action_templates.brpaz/Hadolint
+                [ let action = job-templates.brpaz/Hadolint
 
                   in  action.mkStep action.Common::{=} action.Inputs::{=}
                 ]
