@@ -1,7 +1,10 @@
   { gh-actions-dhall =
-      https://raw.githubusercontent.com/awseward/gh-actions-dhall/0.2.8/package.dhall sha256:8899686ff3a6c021b21a4c801f752f376b073fa3e32bf2b82c5f8741b34407b5
+      https://raw.githubusercontent.com/awseward/gh-actions-dhall/0.3/package.dhall
+        sha256:3572ad50c847f7527a449daf40096b1c4eb173fee1add75aa6cb636ab528fe72
   , gh-actions-shell =
-      https://raw.githubusercontent.com/awseward/gh-actions-shell/0.1.5/package.dhall sha256:527552e5f702e7f355e4cdb9fc4256f200a70ae796056257ca6ce02c9a728f8c
+      https://raw.githubusercontent.com/awseward/gh-actions-shell/0.1.5/package.dhall
+        sha256:527552e5f702e7f355e4cdb9fc4256f200a70ae796056257ca6ce02c9a728f8c
   }
-⫽ ( https://raw.githubusercontent.com/awseward/dhall-misc/20210514020537/package.dhall sha256:5365fa3f87b28f72ec098d90f4b2788cdafdb9463032afa75b8b7ebafdd02351
+⫽ ( https://raw.githubusercontent.com/awseward/dhall-misc/20210611190215/package.dhall
+      sha256:9739f7e3d3b4be0cbff599ac3dd63045b474d6f34f081f6f6a3166aa5616b286
   ).{ GHA, job-templates }
