@@ -15,7 +15,9 @@ _list_files() {
         _shell_files+=("${file}")
         ;;
       *)
-        if head -n1 "${file}" | command grep -q -E '^#!/.*(ba)?sh'; then
+        # From Shellcheck man page:
+        # > Valid values are sh, bash, dash and ksh.
+        if head -n1 "${file}" | command grep -q -E '^#!/.*(/| )(ba|da|k)?sh'; then
           _shell_files+=("${file}")
         fi
         ;;
