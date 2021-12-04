@@ -11,7 +11,7 @@ _list_files() {
   local _shell_files=()
   for file in "${_all_files[@]}"; do
     case "${file}" in
-      *.bash|*.sh)
+      *.sh|*.bash|*.dash|*.ksh)
         _shell_files+=("${file}")
         ;;
       *)
