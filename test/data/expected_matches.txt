@@ -1,0 +1,12 @@
+has_ext/script.bash
+has_ext/script.dash
+has_ext/script.ksh
+has_ext/script.sh
+no_ext/direct_shebang/script_bash
+no_ext/direct_shebang/script_dash
+no_ext/direct_shebang/script_ksh
+no_ext/direct_shebang/script_sh
+no_ext/env_shebang/script_bash
+no_ext/env_shebang/script_dash
+no_ext/env_shebang/script_ksh
+no_ext/env_shebang/script_sh
