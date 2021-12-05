@@ -3,6 +3,7 @@
 set -eu
 
 _list_files() {
+  echo oops
   local _all_files=()
   while IFS='' read -r line; do
     _all_files+=("${line}");
