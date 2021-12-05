@@ -23,3 +23,5 @@ if [ "$(comm -3 "${expected_output_file}" "${actual_output_file}" | wc -l)" -gt 
   echo $'\nERROR: Mismatches present!'
   exit 1
 fi
+
+echo 'OK'

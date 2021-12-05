@@ -31,6 +31,16 @@ jobs:
       # changes like this less of a hassle; as it is I'm not sure anymore if
       # it's worth it.
       - uses: "awseward/gh-actions-shell@0.1"
+
+  # Note: Running `_gen_actions` will likely remove this whole block… I would
+  # like to try to think of some way to make routine changes like this less of
+  # a hassle; as it is I'm not sure anymore if it's worth it.
+  check-local:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run checks committed directly to repository
+        run:  set -euo pipefail; find .checks -type f | while read -r check_file; do "${check_file}"; done
 name: CI
 on:
   - push
