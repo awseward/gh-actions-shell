@@ -12,7 +12,7 @@ one() {
 }
 
 many() {
-  gxargs -n 1 -d $'\n' -- "$0" one | sort -u
+  xargs -n 1 -d $'\n' -- "$0" one | sort -u
 }
 
 "$@"
