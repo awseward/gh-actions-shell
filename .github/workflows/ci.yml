@@ -16,9 +16,10 @@ jobs:
       - ubuntu-latest
     steps:
       - uses: "actions/checkout@v2"
-      - uses: "awseward/gh-actions-dhall@0.3.2"
+      - uses: "awseward/gh-actions-dhall@0.4.0"
         with:
-          dhallVersion: '1.39.0'
+          dhallVersion: '1.40.2'
+          errorOnFreezeDiff: false
           typecheck_no_cache: false
           typecheck_package_files_only: false
   check-shell:
@@ -26,11 +27,7 @@ jobs:
       - ubuntu-latest
     steps:
       - uses: "actions/checkout@v2"
-      # Note: Running `_gen_actions` will likely undo the most recent change to
-      # this line… would like to try to think of some way to make routine
-      # changes like this less of a hassle; as it is I'm not sure anymore if
-      # it's worth it.
-      - uses: "awseward/gh-actions-shell@0.1"
+      - uses: "awseward/gh-actions-shell@0.1.7"
 
   # Note: Running `_gen_actions` will likely remove this whole block… I would
   # like to try to think of some way to make routine changes like this less of
