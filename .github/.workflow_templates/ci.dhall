@@ -6,8 +6,6 @@ let On = GHA.On
 
 let OS = GHA.OS.Type
 
-let actions-catalog = imports.actions-catalog
-
 let job-templates = imports.job-templates
 
 let Checkout = job-templates.actions/Checkout
@@ -29,7 +27,7 @@ in  GHA.Workflow::{
           , runs-on = [ OS.ubuntu-latest ]
           , steps =
               Checkout.plainDo
-                [ let action = actions-catalog.awseward/gh-actions-shell
+                [ let action = imports.gh-actions-shell
 
                   in  action.mkStep action.Common::{=} action.Inputs::{=}
                 ]
@@ -38,7 +36,7 @@ in  GHA.Workflow::{
           , runs-on = [ OS.ubuntu-latest ]
           , steps =
               Checkout.plainDo
-                [ let action = actions-catalog.awseward/gh-actions-dhall
+                [ let action = imports.gh-actions-dhall
 
                   in  action.mkStep action.Common::{=} action.Inputs::{=}
                 ]

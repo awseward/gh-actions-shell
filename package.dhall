@@ -1,3 +1,5 @@
+let Inputs = ./inputs.dhall
+
 let imports =
       { GHA =
           https://raw.githubusercontent.com/awseward/dhall-misc/20210119042727/GHA/package.dhall
@@ -5,8 +7,6 @@ let imports =
       }
 
 let GHA = imports.GHA
-
-let Inputs = ./inputs.dhall
 
 let mkStep/next = GHA.actions.mkStep/next Inputs.Type Inputs.{ toJSON }
 
